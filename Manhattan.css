@@ -225,7 +225,7 @@ a{
 /* !Kitchen and Food */
 .kitchen{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     background-color: var(--primary-color);
 }
 
@@ -297,5 +297,68 @@ a{
     padding-top: 16px;
 }
 
+.all-menu-button{
+    text-align: center;
+    padding-top: 110px;
+}
+
+.menu-button{
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--font-primary);
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    transition: all .2s linear;
+    border: 2px solid var(--border-primary);
+}
+
+.menu-button:hover{
+    background-color: transparent;
+}
+
+/* !Events */
+.events{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding-top: 150px;
+}
+
+.container__events{
+    max-width: calc(1344px+44px+44px);
+}
+
+.events__inner{
+    display: flex; 
+    align-items: center;
+}
+
+.about-box{
+    text-align: center;
+}
+
+.about-box__subtext{
+    font-family: var(--poppins-font);
+    font-weight: 200;
+    font-size: 14px;
+    color: var(--font-primary);
+    padding: 35px 0;
+}
+
+.button__events{
+    padding: 15px 30px;
+    font-family: var(--poppins-font);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.events__img{
+    width: 416px;
+    height: 560px;
+    margin: 0 44px;
+}
 
 
