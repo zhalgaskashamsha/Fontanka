@@ -1,0 +1,71 @@
+@import "/Manhattan.css";
+
+.corp{
+    width: 100%;
+    height: calc(100vh-150px);
+    background-color: var(--primary-color);
+}
+
+.corp__title{
+    text-align: center; 
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--font-primary);
+}
+
+.mt{
+    margin-top: 100px;
+}
+
+.feature-block__img{
+    aspect-ratio: 1/1;
+    width: 90px;
+}
+
+.feature-block__text{
+    font-family: var(--poppins-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--font-primary);
+    padding-top: 40px;
+}
+
+.corp-features{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.corp-features__feature-block{
+    width: 100%;
+    max-width: 376px;
+    margin-top: 80px;
+}
+
+.why-us-features__item{
+    list-style: url(/ManhattanCorps/assets/dot.png);
+}
+
+.tac{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 60px;
+}
+
+.why-us-features__item{
+    margin-top: 10px;
+}
+
+.why-us-features__item p{
+    font-family: var(--poppins-font);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--font-primary);
+    text-align: left;
+}

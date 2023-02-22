@@ -1,98 +1,64 @@
 @import "/Manhattan.css";
 
-.concert-board{
+.concert-view{
     width: 100%;
     height: 100vh;
     background-color: var(--primary-color);
 }
 
-.concert-board__inner{
-    display: flex;
-    flex-wrap: wrap;
+.concert-poster-board{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
 }
 
-.concert-board__img{
-    width: 306px;
-    height: 350px;
-}
-
-.hover-text-box{
-    width: 306px;
-    height: 350px;
+.concert-img-box{
     position: relative;
+    height: 350px;
 }
 
-.absolute{
+.concert-img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.concert-img-box::before{
+    content: "17.07.2022 19.00 Рок в Манхэттене ";
     position: absolute;
-    left: 35px;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    width: 75%;
+    transition: .2s;
+    transition-delay: 50ms;
+    opacity: 0;
     z-index: 999;
 
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .2s, visibility .2s;
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--font-primary);
 }
 
-.fade{
-    width: 306px;
-    height: 350px;
-    background: rgba(0, 0, 0, 0.7);
-    visibility: hidden;
-    opacity: 0;
+.concert-img-box:after{
+    content: "";
     position: absolute;
-    transition: opacity .2s, visibility .2s;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.4);
+    transition: 2.s;
 }
 
-.concert-board__time-date{
-    font-family: var(--montserrat-font);
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--font-primary);
-    padding: 8px 15px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    background-color: var(--secondary-color);
-    transition: all .2s linear;
-    border: 2px solid var(--border-primary);
-    margin-bottom: 127px;
+.concert-img-box:hover::after{
+    height: 100%;
 }
 
-.concert-board__desc{
-    margin-bottom: 15px;
-    font-family: var(--montserrat-font);
-    color: var(--font-primary);
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 85px;
-}
-
-.concert-board__price{
-    vertical-align: top;
-    padding: 10px 20px 7px 20px;
-    border-radius: 5px;
-    border: 2px solid var(--border-primary);
-    transition: all .2s linear;
-    cursor: pointer;
-
-    font-family: var(--montserrat-font);
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--font-primary);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-}
-
-.concert-board__price:hover{
-    background-color: var(--secondary-color);
-}
-
-.hover-text-box:hover .absolute{
-    visibility: visible;
-    opacity: 1;
-}
-
-.hover-text-box:hover .fade{
-    visibility: visible;
+.concert-img-box:hover::before{
     opacity: 1;
 }
 
