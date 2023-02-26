@@ -1,5 +1,41 @@
 @import url(/Manhattan.css);
 
+.image-popup span{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 100px;
+    font-weight: bold;
+    z-index: 10000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.image-popup{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .9);
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+}
+
+.image-popup.active{
+    display: block;
+}
+
+.image-popup img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 806px;
+    height: 850px;
+    object-fit: cover;
+}
+
 .gallery{
     width: 100%;
     height: calc(100vh-150px);
