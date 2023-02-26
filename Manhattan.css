@@ -34,8 +34,9 @@ a{
 
 .container{
     width: 100%;
-    max-width: 1344px;
+    max-width: 1314px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .divider{
@@ -71,7 +72,6 @@ a{
 /* !Header */
 .header{
     position: absolute;
-    width: 100%;
     width: 100%;
     left: 0;
     top: 0;
@@ -490,6 +490,7 @@ a{
     border-radius: 5px;
     transition: all .2s linear;
     margin: 0 12px;
+    cursor: pointer;
 }
 
 .social-img:hover{
@@ -499,7 +500,7 @@ a{
 /* !Footer */
 .footer{
     width: 100%;
-    height: 100vh;
+    padding: 0 0 150px 0;
     background-color: var(--primary-color);
 }
 
@@ -550,6 +551,228 @@ a{
 .contacts-subtitle__no-margin{
     margin: 0;
 }
+
+/* !Our other places */
+.tab{
+    width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 300px 0;
+}
+
+.tab-container{
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.tab-nav{
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    list-style: none;
+    border-bottom: 1px solid #999;
+    position: relative;
+}
+
+.tab-nav li{
+    padding: 20px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s;
+    color: gray;
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+}
+
+.tab-nav li.active{
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+.tab-nav li:not(:last-child){
+    margin-right: 70px;
+}
+
+.tab-body{
+    margin-top: 100px;
+    display: none;
+    align-items: center;
+    animation: fade 0.8s;
+}
+
+.tab-body.active {
+    display: flex;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.tab-body .tab-col-left,
+.tab-body .tab-col-right{
+    flex: 1;
+}
+
+.tab-body .tab-col-right h2{
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.tab-body .tab-col-right .btn{
+    padding: 15px 45px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    margin: 30px 0 0 30px;
+    font-family: var(--montserrat-font);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tab-col-right h2{
+    padding: 0 0 20px 30px;
+    font-family: var(--montserrat-font);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tab-col-right p{
+    padding: 0 0 20px 30px;
+    color: white;
+    font-size: 20px;
+    font-family: var(--poppins-font);
+    font-weight: 600;
+}
+
+/* !Pop up */
+.pop-up{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    display: none;
+}
+
+.pop-up.active{
+    display: block;
+}
+
+.pop-up__container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.pop-up__body{
+    position: relative;
+    margin: auto;
+    width: 590px;
+    height: 522px;
+    padding: 47px 61px 55px 61px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.pop-up__title{
+    margin-bottom: 65px;
+    text-align: center;
+    font-family: var(--montserrat-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #fff;
+}
+
+.pop-up__body input{
+    margin-bottom: 35px;
+    font-family: var(--montserrat-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #7D7D7D;
+
+    display: block;
+    width: 468px;
+    padding: 19px 292px 19px 16px;
+    border-radius: 8px;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.pop-up__body input:focus{
+    outline: none;
+}
+
+.pop-up__body select{
+    font-family: var(--montserrat-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #7D7D7D;
+
+    cursor: pointer;
+    display: block;
+    width: 468px;
+    padding: 19px 292px 19px 16px;
+    border-radius: 8px;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.pop-up__send-button{
+    font-family: var(--montserat-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #fff;
+    text-align: center;
+
+    cursor: pointer;
+    margin-top: 35px;
+    background-color: transparent;
+    padding: 21px 185px;
+    border-radius: 8px;
+    border: none;
+    transition: all .2s linear;
+    border: 1px solid var(--border-primary);
+}
+
+.pop-up__send-button:hover{
+    background-color: var(--secondary-color);
+}
+
+.pop-up__close-button{
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+
 
 
 
