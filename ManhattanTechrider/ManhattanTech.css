@@ -1,0 +1,10 @@
+@import url(/Manhattan.css);
+
+.party__tech{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 300px 0;
+    width: 100%;
+    height: calc(100vh-300px);
+}
