@@ -1,0 +1,107 @@
+@import url(/Manhattan.css);
+
+.tab{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 300px 0;
+}
+
+.tab-container{
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.tab-nav{
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    list-style: none;
+    border-bottom: 1px solid #999;
+    position: relative;
+}
+
+.tab-nav li{
+    padding: 20px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s;
+    color: gray;
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+}
+
+.tab-nav li.active{
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+.tab-nav li:not(:last-child){
+    margin-right: 70px;
+}
+
+.tab-body{
+    margin-top: 100px;
+    display: none;
+    align-items: center;
+    animation: fade 0.8s;
+}
+
+.tab-body.active {
+    display: flex;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.tab-body .tab-col-left,
+.tab-body .tab-col-right{
+    flex: 1;
+}
+
+.tab-body .tab-col-right h2{
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.tab-body .tab-col-right .btn{
+    padding: 15px 45px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    margin: 30px 0 0 30px;
+    font-family: var(--montserrat-font);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tab-col-right h2{
+    padding: 0 0 20px 30px;
+    font-family: var(--montserrat-font);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tab-col-right p{
+    padding: 0 0 20px 30px;
+    color: white;
+    font-size: 20px;
+    font-family: var(--poppins-font);
+    font-weight: 600;
+}
