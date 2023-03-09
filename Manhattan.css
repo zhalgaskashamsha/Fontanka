@@ -772,6 +772,65 @@ a{
     cursor: pointer;
 }
 
+/* ? Mobile */
+@media screen and (max-width: 320px) {
+    .nav, .button__header{
+        display: none;
+    }
+
+    .right-side{
+        display: none;
+    }
+
+    .left-side__text-box{
+        padding: 0 0 20px 16px;
+    }
+
+    .since-text{
+        font-size: 10px;
+        padding: 8px 18px;
+    }
+
+    .title-text{
+        font-size: 20px;
+        padding-top: 15px;
+    }
+
+    .divider__title{
+        font-size: 12px;
+    }
+
+    .divider__subtitle{
+        font-size: 30px;
+        padding-top: 30px;
+    }
+
+    .food__items{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .food__img img{
+        width: 80px;
+    }
+
+    .food__name{
+        font-size: 14px;
+    }
+
+    .food__price{
+        padding: 8px 14px;
+        font-size: 10px;
+    }
+
+    .food__desc{
+        font-size: 10px;
+        padding-top: 2px;
+    }
+
+}
+
 
 
 

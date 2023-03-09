@@ -69,3 +69,14 @@
     color: var(--font-primary);
     text-align: left;
 }
+
+.why-us__link{
+    font-family: var(--poppins-font);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--font-primary);
+    position: absolute;
+    left: 37.2  %;
+}
